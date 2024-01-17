@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+:root{
+    --clr-dark: #686767;
+    --clr-text-primary: rgb(20, 19, 19);
+    --clr-slate: #427D9D;
+    --clr-bg: #ffffff;
+    --clr-btn-hover: #1e40af;
+    --clr-btn-primary: #1d4ed8;
+    --clr-list: #7B66FF;
+    --clr-list-light: #624fdf;
+    --clr-primary: #1d2b53;
+    --clr-secondary: #7E2553;
+    --clr-light: #FF004D
+    --max-width: 1200px
+    
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--clr-bg);
+    color: var(--clr-primary);
+    max-width: 100%;
+    min-height: 100dvh;
+    
+}
+
+
+.container {
+    max-width: 1200px;
+    padding: 4rem 2rem;
+    margin-bottom: 1rem;
+    margin: auto;
+    /* height: 100vh; */
+}
+
+.container:has(header) {
+    height: calc(100dvh - 18dvh);
+ }
+
+/* Animations */
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateY(-10%);
+  }
+  
+  .show {
+    opacity: 1;
+    transition: all 1.5s;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+  
+  .animation:nth-child(2) {
+    transition-delay: 200ms;
+  }
+  
+  .animation:nth-child(3) {
+    transition-delay: 400ms;
+  }
+
+  .animation:nth-child(4) {
+    transition-delay: 600ms;
+  }
+  
+  .dot {
+    transition-delay: 1000ms
+  }
+  
+
+
+ @media only screen and ( width >= 1024px){
+
+        
+    .card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .container .about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+    .card:has(.link-image, .card-wrapper) {
+        flex: 1 1 100%;
+    }
+
+    
+    .hamburger{
+        display: none;
+    }
+    
+    
+}
+
+@media only screen and (390px <= width <= 1024px ) {
+    .nav-links {
+        display: none;
+    }
+    
+    .profile-img a img {
+        width: 75px;
+        height: 75px;
+    }
+    
+    .link-image img {
+        width: inherit;
+        height: 20vh + 0.5rem;
+    }
+
+    .dot {
+        display: none;
+    }
+
+    
+    .nav-links ul {
+    opacity: 0;
+    }
+
+    .hidden {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0px);
+    transition: none;
+    }
+
+    .show {
+    transition: none;
+    }
+
+
+    .footer-links ul, .footer-links .subheader p {
+    display: none;
+    }
+
+    .footer-wrapper .footer-content .footer-name p {
+    font-size: 1.75rem;
+    }
+
+    .copyright h5 {
+    font-size: 0.5rem;
+    }
+}
