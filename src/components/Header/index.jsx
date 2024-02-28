@@ -18,6 +18,7 @@ export default function Header() {
       
     })
 
+
     observer.observe(myRef.current);
 
   },[])
@@ -32,7 +33,6 @@ export default function Header() {
             Developer. Over the past months I'm upskilling myself to learn
             programming and development.
           </h1>
-        
           <div ref={myRef} className={isVisible ? "animation show titles" : "animation hidden titles"}>
             <p>Web Developer</p>
             <p>Python | JavaScript </p>
