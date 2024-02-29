@@ -9,3 +9,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <App />
   </React.StrictMode>,
 )
+
+// TODO: BrowserRouter, react not render on the Github Pages. Hear this hear this
