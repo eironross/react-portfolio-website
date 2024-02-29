@@ -6,3 +6,5 @@ export default defineConfig({
   base: "/react-portfolio-website/",
   plugins: [react()],
 })
+
+
