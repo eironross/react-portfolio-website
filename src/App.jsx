@@ -2,7 +2,6 @@ import Nav from "./components/Nav/index.jsx";
 import Header from "./components/Header/index.jsx";
 import Section from "./components/Section/index.jsx";
 import Card from "./components/Card/index.jsx";
-import About from "./components/About/index.jsx";
 import Footer from "./components/Footer/index.jsx";
 import cards from "./description.js"
 
