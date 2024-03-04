@@ -1,0 +1,132 @@
+
+header {
+  height: 100%;
+  position: relative;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* border: 2px red solid; */
+}
+
+header:has(.dot) {
+  align-items: center;
+}
+
+header .content {
+  width: 100%;
+  /* border: 2px solid red; */
+}
+
+header .content h1 {
+  margin-bottom: 2rem;
+  font-size: 2.25rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+
+header .content h1 #name-header {
+  font-family: "Abril Fatface", sans-serif;
+  font-style: blod;
+  font-weight: 600;
+}
+
+header .content p:first-child {
+  font-size: 2.25rem;
+  font-weight: 500;
+  text-align: left;
+}
+
+header .content .titles {
+  display: flex;
+  gap: 1rem;
+}
+
+header .content h1 > div {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 8px;
+  overflow: hidden;
+  padding: 0;
+  height: 52px;
+}
+
+header .content h1 > .words {
+  margin-right: 8px;
+}
+
+
+header .content .socials {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+header .content .socials a {
+  text-align: center;
+  
+}
+
+header .content .socials a svg{
+
+  height: clamp(1.5rem, 1.5vw + 0.5rem, 2rem);
+  width: 100%;
+  font-size: clamp(0.25rem, 1.5vw + 0.5rem, 2rem);
+}
+
+header .content .socials .icon-hover svg path {
+  transition: all 0.5s ease;
+}
+
+svg path {
+  fill: var(--clr-primary) ;
+}
+
+header .content .socials .icon-hover svg:hover path {
+  fill: rgba(29, 43, 83, 0.8);
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+.determiner, .words {
+  position: relative;
+  /* border: 2px red solid; */
+  
+}
+
+.determiner-word, .career-path {
+  height: 50px;
+  transform: translateY(0);
+  animation: spin_words 5s ease forwards;
+}
+
+.determiner-word {
+  animation-delay: 500ms;
+}
+
+.determiner-word:nth-child(2) {
+  letter-spacing: 0.70px;
+}
+
+@keyframes spin_words {
+
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-52px);
+  }
+  50% {
+    transform: translateY(-51px);
+  }
+  75%{
+    transform: translateY(-53px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+

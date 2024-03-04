@@ -1,0 +1,31 @@
+.arrow-item {
+    width: 6.5px;
+    height: 35px;
+    border-radius: 6px;
+    background-color: var(--clr-primary);
+    margin: 7.5px;
+    
+}
+
+.arrow-item:nth-of-type(1) {
+    transform: rotate(-45deg);
+    
+}
+
+.arrow-item:nth-of-type(2) {
+    transform: rotate(45deg);
+}
+
+.arrow {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: move 3s ease infinite;
+}
+
+@keyframes move{
+    0% { transform: translateY(0);}
+    50% { transform: translateY(25%);}
+    100% { transform: translateY(0);}
+}

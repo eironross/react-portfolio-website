@@ -1,0 +1,169 @@
+/* font imports */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
+/* DM Serif Display & DM Sans */
+/* Abril Fatface & Poppins */
+
+:root{
+    --clr-dark: #686767;
+    --clr-text-primary: rgb(20, 19, 19);
+    --clr-slate: #427D9D;
+    --clr-bg: #fff;
+    --clr-btn-hover: #1e40af;
+    --clr-btn-primary: #1d4ed8;
+    --clr-list: #7B66FF;
+    --clr-list-light: #624fdf;
+    --clr-primary: #1d2b53;
+    --clr-secondary: #7E2553;
+    --clr-light: #FF004D;
+    --max-width: 1200px;
+    
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--clr-bg);
+    color: var(--clr-primary);
+    max-width: 100%;
+    min-height: 100vh;
+    
+}
+
+.container {
+    max-width: 1024px;
+    padding: 4rem 2rem;
+    margin-bottom: 1rem;
+    margin-inline: auto;
+    /* height: 100vh; */
+}
+
+.container:has(header) {
+    height: 60vh;
+ }
+
+/* Animations */
+
+.hidden {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(-12%);
+  }
+  
+  .show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+    transition: opacity 1.5s, transform 1000ms, filter 1.5s;
+  }
+  
+  .animation:nth-child(2) {
+    transition-delay: 300ms;
+  }
+  
+  .animation:nth-child(3) {
+    transition-delay: 400ms;
+  }
+
+  .animation:nth-child(4) {
+    transition-delay: 600ms;
+  }
+  
+  .dot {
+    transition-delay: 1000ms
+  }
+  
+
+ @media only screen and ( width >= 1024px){
+    .hamburger{
+        display: none;
+    }
+
+
+}
+
+@media only screen and (871px <= width <= 1024px ) {
+    section {
+        margin-inline: 2rem;
+    }
+
+    section .wrapper  {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media only screen and (375px <= width <= 871px ) {
+
+    section {
+        margin-inline: 2rem;
+    }
+
+    section .wrapper  {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .project-link > img {
+        width: 100%;
+        height: 400px;
+    }
+
+    .card-title {
+        height: 170px;
+    }
+
+    .card-wrap {
+        margin-bottom: 3rem;
+    }
+
+    .nav-links {
+        display: none;
+    }
+    
+    .hidden {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0px);
+    transition: none;
+    }
+
+    .show {
+    transition: none;
+    }
+
+    header .content h1, header .content p:first-child {
+        font-size: 1.75rem;
+      }
+      
+
+    .determiner-word, .career-path {
+        animation: none;
+        transition: none;
+        
+    }
+
+    header .content h1 > div {
+        margin-left: 0;
+        height: 49px;
+    }
+
+    .footer-links {
+        font-size: 0.875rem;
+    }
+
+    .dot {
+        display: none;
+    }
+}
